@@ -21,7 +21,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="entryTb" HorizontalAlignment="Left" Margin="144,103,0,0" TextWrapping="Wrap" Width="164" Grid.ColumnSpan="2" BorderBrush="White" Foreground="White" Height="24" FontSize="15" VerticalAlignment="Top">
+        <TextBox x:Name="entryTb" PreviewTextInput="NumericOnlyInput" HorizontalAlignment="Left" Margin="144,103,0,0" TextWrapping="Wrap" Width="164" Grid.ColumnSpan="2" BorderBrush="White" Foreground="White" Height="24" FontSize="15" VerticalAlignment="Top">
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -29,7 +29,7 @@
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="stopTb" HorizontalAlignment="Left" Margin="144,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Grid.ColumnSpan="2" BorderBrush="White" Foreground="White" Height="24" FontSize="15">
+        <TextBox x:Name="stopTb" PreviewTextInput="NumericOnlyInput" HorizontalAlignment="Left" Margin="144,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Grid.ColumnSpan="2" BorderBrush="White" Foreground="White" Height="24" FontSize="15">
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -37,7 +37,7 @@
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <TextBox x:Name="tpTb" HorizontalAlignment="Left" Margin="144,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Grid.ColumnSpan="2" BorderBrush="White" Foreground="White" Height="24" FontSize="15">
+        <TextBox x:Name="tpTb"  PreviewTextInput="NumericOnlyInput" HorizontalAlignment="Left" Margin="144,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" Grid.ColumnSpan="2" BorderBrush="White" Foreground="White" Height="24" FontSize="15">
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>

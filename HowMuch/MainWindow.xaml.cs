@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Net.NetworkInformation;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -209,6 +212,23 @@ namespace HowMuch
             };
             rCombo.ItemsSource = items;     
         }
+       
+        private void NumericOnlyInput(object sender, TextCompositionEventArgs e)
+        {
+            // Check if the entered text is a valid number (integer or with a single decimal point).
+            if (!IsNumericWithDecimal(e.Text))
+            {
+                e.Handled = true; // Discard the input if it's not a valid number.
+            }
+        }
+
+        private bool IsNumericWithDecimal(string text)
+        {
+            // Regular expression pattern to match a valid number (integer or decimal).
+            string pattern = @"^[0-9]*\.?[0-9]*$";
+            return System.Text.RegularExpressions.Regex.IsMatch(text, pattern);
+        }
+       
 
         private double CalcPL()
         {
