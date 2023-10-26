@@ -213,7 +213,12 @@ namespace HowMuch
         private double CalcPL()
         {
             if (!string.IsNullOrEmpty(entryTb.Text) && !string.IsNullOrEmpty(stopTb.Text) && !string.IsNullOrEmpty(tpTb.Text))
-                return (double.Parse(tpTb.Text) - double.Parse(entryTb.Text)) * CalcShares();
+                if (double.Parse(tpTb.Text) < double.Parse(entryTb.Text) && double.Parse(stopTb.Text)>double.Parse(entryTb.Text))
+                {
+                    return -1*(double.Parse(tpTb.Text) - double.Parse(entryTb.Text)) * CalcShares();
+                }
+                else
+                    return (double.Parse(tpTb.Text) - double.Parse(entryTb.Text)) * CalcShares();
             else
                 return 0;
         }
@@ -236,7 +241,7 @@ namespace HowMuch
 
             if (pl < 0) youMadeValueLbl.Foreground = red;
             else youMadeValueLbl.Foreground = lime;
-
+            
             youMadeValueLbl.Content = textBlock;
         }
         private int CalcShares()

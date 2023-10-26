@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HowMuch"
         mc:Ignorable="d"
-        Title="How Much I Would Have Made?" Height="600" Width="400" BorderBrush="Black" ResizeMode="CanMinimize" Icon="/Icon For App.png" WindowStartupLocation="CenterScreen">
+        Title="How Much I Would Have Made?" Height="500" Width="400" BorderBrush="Black" ResizeMode="CanMinimize" Icon="/Icon For App.png" WindowStartupLocation="CenterScreen">
 
-    <Grid x:Name="gridview" Margin="0,0,0,-26" Background="Black" Width="400" HorizontalAlignment="Center" Height="600" VerticalAlignment="Bottom">
+    <Grid x:Name="gridview" Margin="0,0,0,-26" Background="Black" Width="400" HorizontalAlignment="Center" Height="500" VerticalAlignment="Bottom">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="155*"/>
             <ColumnDefinition Width="157*"/>
             <ColumnDefinition Width="88*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="calcBtn" Content="Calculate" Margin="9,379,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" RenderTransformOrigin="-0.597,1.4" Foreground="White" BorderBrush="Black" Click="calcBtn_Click" Height="36" Width="100" Grid.Column="1" FontSize="15">
+        <Button x:Name="calcBtn" Content="Calculate" Margin="144,380,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" RenderTransformOrigin="-0.597,1.4" Foreground="White" BorderBrush="Black" Click="calcBtn_Click" Height="36" Width="100" FontSize="15" Grid.ColumnSpan="2">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -45,7 +45,7 @@
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-        <Label x:Name="entryLbl" Content="Entry Price:" Margin="0,0,11,473" VerticalAlignment="Bottom" FontSize="13" HorizontalAlignment="Right" Foreground="White"/>
+        <Label x:Name="entryLbl" Content="Entry Price:" Margin="72,0,0,371" VerticalAlignment="Bottom" FontSize="13" HorizontalAlignment="Left" Foreground="White"/>
         <Label x:Name="stopLbl" Content="Stop Price:" Margin="0,145,11,0" VerticalAlignment="Top" Foreground="White" FontSize="13" RenderTransformOrigin="0.507,0.257" HorizontalAlignment="Right"/>
         <Label x:Name="tpLbl" Content="Target Price:" Margin="0,193,11,0" VerticalAlignment="Top" Foreground="White" FontSize="13" HorizontalAlignment="Right"/>
         <Label x:Name="youMadeValueLbl" Content="" HorizontalAlignment="Left" Margin="78,325,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" FontSize="14" Foreground="White" Width="auto" Height="29"/>
